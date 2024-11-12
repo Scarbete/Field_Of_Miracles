@@ -1,0 +1,48 @@
+.winner {
+    width: 500px;
+    margin: 80px auto 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    background: limegreen;
+    color: white;
+}
+
+.main {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    h1 {
+        background: #222222;
+        border-radius: 8px;
+        padding: 10px;
+        color: white;
+        margin-bottom: 70px;
+    }
+
+    .questionBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        form {
+            input, button {
+                height: 40px;
+                border: 1px solid black;
+                padding: 0 15px;
+                margin: 10px 0;
+            }
+        }
+
+        .wordsView {
+            display: flex;
+
+            .wordBlock {
+                padding: 10px;
+                border: 1px solid black;
+            }
+        }
+    }
+}

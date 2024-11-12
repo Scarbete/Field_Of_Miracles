@@ -1,0 +1,39 @@
+.header {
+    background: var(--dark-black-color);
+    height: 85px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        gap: 50px;
+
+        img {
+            width: 60px;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+
+                li {
+                    color: white;
+                    text-transform: uppercase;
+
+                    a {
+                        color: white;
+                    }
+
+                    button {
+                        margin-left: 70px;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

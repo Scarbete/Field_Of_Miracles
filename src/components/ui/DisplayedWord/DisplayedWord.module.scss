@@ -1,0 +1,13 @@
+.wordsView {
+    display: flex;
+
+    .wordBlock {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+}
