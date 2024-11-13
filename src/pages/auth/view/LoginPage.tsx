@@ -1,11 +1,8 @@
 import { FC } from 'react'
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { createLoginSchema } from '@/pages/auth'
 import { useAppDispatch, useAppSelector } from '@/hooks/redux.tsx'
 import { authActions } from '@/redux/slices/auth/authSlice.ts'
 import InputField from '@/components/ui/InputField/InputField'
-import { LoginFormState } from '../data/forms'
+import { LoginFormState, useLoginForm } from '@/pages/auth'
 import styles from './loginPage.module.scss'
 
 
@@ -19,14 +16,7 @@ const LoginPage: FC = () => {
         formState: { errors },
         setError,
         reset
-    } = useForm<LoginFormState>({
-        mode: 'onChange',
-        resolver: yupResolver(createLoginSchema()),
-        defaultValues: {
-            login: '',
-            password: '',
-        }
-    })
+    } = useLoginForm()
 
     const loginSubmit = (data: LoginFormState) => {
         dispatch(authActions.loginUser({

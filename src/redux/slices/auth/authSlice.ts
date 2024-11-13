@@ -1,17 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { alertToast } from '@/utils/libs/alertToast.ts'
+import { AuthFormState } from '@/redux/slices/auth/authTypes.ts'
 
-export type AuthFormState = {
-    login: string
-    password: string
-}
+
+const name = 'authSlice'
 
 type AuthState = {
     isAuth: boolean,
     userData: null | AuthFormState
 }
-
-const name = 'authSlice'
 
 const initialState: AuthState = {
     isAuth: JSON.parse(localStorage.getItem('auth') ?? 'false'),
@@ -19,7 +16,7 @@ const initialState: AuthState = {
 }
 
 
-const { actions: authActions, reducer: authReducer } = createSlice({
+export const { actions: authActions, reducer: authReducer } = createSlice({
     name,
     initialState,
     reducers: {
@@ -50,8 +47,3 @@ const { actions: authActions, reducer: authReducer } = createSlice({
         },
     }
 })
-
-export {
-    authActions,
-    authReducer
-}

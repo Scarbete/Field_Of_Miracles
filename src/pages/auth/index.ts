@@ -1,2 +1,4 @@
+export * from './types/loginFormTypes'
+export { useLoginForm } from './hooks/useLoginForm'
 export { createLoginSchema } from './data/forms'
-export { default as LoginPage } from './view/LoginPage'
+export { LoginPage } from './view/LoginPage.lazy.tsx'

@@ -1,16 +1,16 @@
-import { FC } from 'react'
-import Header from '@/components/base/header/Header.tsx'
+import { FC, Suspense } from 'react'
+import Header from '@/components/base/Header/Header.tsx'
 import { Outlet } from 'react-router-dom'
 
 const Layout: FC = () => {
 
     return (
-        <div>
+        <Suspense fallback={<div>Suspense...</div>}>
             <Header/>
             <main>
                 <Outlet/>
             </main>
-        </div>
+        </Suspense>
     )
 }
 

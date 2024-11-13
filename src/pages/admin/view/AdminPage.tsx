@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { useAppDispatch, useAppSelector } from '@/hooks/redux.tsx'
 import { useForm } from 'react-hook-form'
-import InputField from '@/components/ui/InputField/InputField'
+import InputField from '@/components/ui/InputField/InputField.tsx'
 import { gameActions } from '@/redux/slices/game/gameSlice.ts'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'

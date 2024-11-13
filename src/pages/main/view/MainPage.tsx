@@ -1,14 +1,18 @@
 import { FC, useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '@/hooks/redux.tsx'
 import { gameActions } from '@/redux/slices/game/gameSlice.ts'
-import LetterInputForm from '@/components/ui/LetterInputForm/LetterInputForm'
-import DisplayedWord from '@/components/ui/DisplayedWord/DisplayedWord'
-import WordInputForm from '@/components/ui/WordInputForm/WordInputForm'
+import LetterInputForm from '@/components/ui/LetterInputForm/LetterInputForm.tsx'
+import DisplayedWord from '@/components/ui/DisplayedWord/DisplayedWord.tsx'
+import WordInputForm from '@/components/ui/WordInputForm/WordInputForm.tsx'
 import styles from './MainPage.module.scss'
 
 const MainPage: FC = () => {
     const dispatch = useAppDispatch()
-    const { currentQuestion, allQuestionsCompleted } = useAppSelector(state => state.game)
+
+    const {
+        currentQuestion,
+        allQuestionsCompleted
+    } = useAppSelector(state => state.game)
 
     useEffect(() => {
         dispatch(gameActions.setRandomQuestion())
@@ -19,7 +23,6 @@ const MainPage: FC = () => {
             Вопросов не осталось, вы выиграли!
         </div>
     }
-
     return (
         <div className={styles.main}>
             <h1>Поле чудес</h1>

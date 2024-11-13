@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { EnumPaths, paths } from '@/routes/routeConfig.tsx'
 import { NavLink } from 'react-router-dom'
-import Container from '@/components/ui/container/Container.tsx'
+import Container from '@/components/ui/Container/Container.tsx'
 import { useAppDispatch, useAppSelector } from '@/hooks/redux.tsx'
-import Logo from '@/assets/vite.svg'
+import Logo from '@/assets/images/vite.svg'
 import { authActions } from '@/redux/slices/auth/authSlice.ts'
 import styles from './Header.module.scss'
 

@@ -8,7 +8,6 @@ import './styles/bundle.scss'
 
 const root = document.getElementById('root')!
 
-
 createRoot(root).render(
     <Provider store={store}>
         <ToastContainer />
@@ -16,6 +15,5 @@ createRoot(root).render(
             router={routeConfig}
             future={{ v7_startTransition: true }}
         />
-
     </Provider>
 )

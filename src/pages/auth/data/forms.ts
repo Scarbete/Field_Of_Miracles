@@ -1,10 +1,5 @@
 import * as yup from 'yup'
 
-export type LoginFormState = {
-    login: string
-    password: string
-}
-
 export const createLoginSchema = () =>
     yup.object().shape({
         login: yup

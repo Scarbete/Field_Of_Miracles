@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
-import ProtectedRoute from '@/components/base/authguard/ProtectedRoute.tsx'
-import Layout from '@/components/base/layout/Layout.tsx'
-import MainPage from '@/pages/main/MainPage.tsx'
+import ProtectedRoute from '@/components/base/ProtectedRoute/ProtectedRoute.tsx'
+import Layout from '@/components/base/Layout/Layout.tsx'
+import { MainPage } from '@/pages/main'
 import { LoginPage } from '@/pages/auth'
-import AdminPage from '@/pages/admin/AdminPage.tsx'
+import { AdminPage } from '@/pages/admin'
 
 export const enum EnumPaths {
     MAIN = 'main',
